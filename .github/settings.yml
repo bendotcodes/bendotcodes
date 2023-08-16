@@ -2,7 +2,7 @@ repository:
   name: bendotcodes
   description: My thought on software development
   private: false
-  default_branch: main 
+  default_branch: main
   allow_auto_merge: true
   allow_squash_merge: true
   allow_merge_commit: true

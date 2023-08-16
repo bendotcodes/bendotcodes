@@ -4,6 +4,6 @@
 
 ## Scripts
 
- - dev: Run in local
- - build: Build for production
- - lint: Check linting rules
+- dev: Run in local
+- build: Build for production
+- lint: Check linting rules
