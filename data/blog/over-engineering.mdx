@@ -1,0 +1,62 @@
+---
+title: 'Your Greatest Mistake of Over-Engineering'
+date: '2023-04-27'
+tags: ['engineering']
+draft: false
+summary: I’ve been guilty of over-engineering a lot. Over-engineering is fun, it makes you learn, it makes you grow. It lets you explore things that would not have been possible otherwise. When used with a fun side project or a proof of concept that is not business critical and it turns out bad, no harm no foul. However, when you are working on something that is very important for your company or client, it must be treated very carefully.
+---
+
+I’ve been guilty of over-engineering a lot. Over-engineering is fun, it makes you learn, it makes you grow. It lets you explore things that would not have been possible otherwise. When used with a fun side project or a proof of concept that is not business critical and it turns out bad, no harm no foul. However, when you are working on something that is very important for your company or client, it must be treated very carefully.
+
+What is over-engineering? You are over-engineering when you build an unnecessarily complicated solution for something that could have been done much faster or cheaper. It tries to solve problems that don’t exist, not because they are imaginary, but because they are not relevant to your context. If you are a team of three software developers working at a startup, you don’t have the same problems as Netflix, Facebook or Google with thousands of engineers and billions of users. Maybe that open source tool they just released seems cool, but they have vastly different problems at that scale.
+
+When you over-engineer, you make your colleagues' lives miserable. They don’t understand what you are trying to do and would rather have you keep things simple and straightforward. Maybe you spent hours trying to refactor that thing so that it is more reusable and extendable. Does it have value to do that? Yes! Will it be useful? Not always. It means you have to learn to spot when it's worth it to invest time on something more robust and when to stop.
+
+## Bootstrapping a Startup
+
+When I was hired as the first developer at a startup and had to start from scratch, I was focused on shipping new features. My budget was small and sales needed those features to close their deals. I was taking all the shortcuts that I could and boom, it's in production the next day or sometimes in just a few hours. Is working like this careless? Not for a bootstrapping startup. Over time, we grew and became more and more unstable. Technical debt was not being addressed. Features took longer and longer to get done. Regressions were flying left and right. Management was angry because it was causing loss of revenues for our customers. This is when we decided we needed to step up our game or lose all our customers. We had to bring our engineering to the next level. What if we skipped that part and took some god damn time to do things correctly at first? The truth is the company would no longer exist if we went that route. No investor would mind giving us money and all of this would have been for nothing. We had to do whatever it takes to succeed and it is part of the game.
+
+As you grow, stability and robustness becomes more important. Do you have any idea how much money Amazon loses if they are down just a few minutes? It's bad. So when they spend a lot of time and money on tiny improvements, it is worth it. However, they have not started there. Don't imitate successful people, imitate successful people when they are at your stage. This is how you should look at your role models.
+
+What about your team members and those that will maintain the application? What is their level of experience, knowledge and maturity? You can't expect a team with mainly junior developers to build a highly scalable cloud native system if they have never done it before. It is setting them up for failure, even if you are an expert in it.
+
+A mature system is not built that way on day one. At first it must start as an MVP (Minimum Viable Product). Getting it in the hands of real users is more important than having the perfect solution. The definition of a minimum depends on your situation but it has to focus on how we can get it in the hands of customers as fast as we can.
+
+Sometimes it means doing things that don't scale but will be fixed later on. We will iterate over multiple versions to become better and better. This is quite often where it goes wrong. Experienced developers have seen firsthand that there is nothing more lasting than a temporary solution. You won't be compelled by clients or business people to fix those hacks. Because we know we will be stuck with that MVP for a while, sometimes we feel like we need to avoid those imperfect things, otherwise they won't ever be fixed. This is scary and sometimes true. It is your job as a software developer to highlight those issues and how it will affect your job and most importantly customers. Otherwise, it is a slippery slope of under-engineering.
+
+Technical debt has a way to creep itself in slowly. More and more regressions will happen and productivity goes down. By fixing the bugs only, it does not solve the bad design and lack of toolings. They are often not addressed because they take a considerable amount of time with no immediate benefit. It is like having a credit card but never paying it off. Interest will creep in slowly at first but snowball very quickly. It is your job as a software developer to show how technical debt has a direct impact on customer satisfaction. For example you can show how many bugs have been created because of it, how many customers have been impacted or how many man hours have been lost because of it.
+
+When you go on the flip side, you are going to over-engineer. It means your productivity will also plummet, not because your hands are tied by issues in production, but because you are being too careful. Many sleepless nights might have left scars and senior developers tend to see ghosts from the past even if they might not be relevant to your current situation. Because of that, good developers tend to over-engineer. Bad developers tend to under-engineer. Outstanding developers are able to walk that line and self correct between the two.
+
+So how do you walk that line? Let me walk you through the three important topics.
+
+## Code Design Over-Engineering
+
+One of the most common mistakes from a developer freshly out of school is the overuse of design patterns. They want them everywhere. They want to make everything reusable with a fancy design. A singleton there, a decorator there, an abstract factory there. I once worked with a developer that was creating what he liked to call engines and matrices, even for simple things. Touching anything that he built was a nightmare to understand and even more to change. The software he was working on was for truck driver companies (pretty fitting I know). 
+
+The more you dig into any business, the more you are going to find complexity and fineness. Your job is not to find the perfect solution for anyone. Your job is to find what really matters to your specific context and simplify towards the essential. The Newton laws are completely wrong and yet we still teach them at school, why? Because they are simple and good enough for human scale. Most people are not going to work for NASA.
+
+Microservices are also notorious for being hard to work with. People want to slap them everywhere. They require a lot more system design knowledge and complexity that a monolith won’t need. More often than not, it’s better to start with a monolith and outgrow it because of that. KISS: Keep It Simple Stupid!
+
+## Tooling Over-Engineering
+
+Fancy tools are fun, I’ll give you that. If you are a sucker for setting up tools and automations that will make you more productive, you have most likely been guilty of over-engineering your tooling. You might like it so much that you do it on your own time just so your boss doesn't blame you for all the time spent on it. From setting up linters to automated test frameworks and CI/CD pipelines, they improve your developer experience. They save you from regressions and manual work. They also make your work of higher quality.
+
+However, when starting a project you cannot spend months and months setting up all the tools that could be useful. Again, just like with code design, you have to know what is essential for your job and what is not. Having the perfect monitoring tools with all the bells and whistles should probably be a nice to have if you have no customer yet. However, if you already have a big customer base and you know your project will be used by a lot of users, you better be god damn sure to have all the monitoring tools ready when you release.
+
+Then, it is always an iterative process of making what exists better. It is much more efficient to start with leaner tools and then figure out what would help you than trying to figure out everything from the get go.
+
+## Infrastructure Over-Engineering
+
+In the past years, Cloud services have taken the world by storm. They all want to distinguish themselves from others by offering an infrastructure that can easily scale at a Fortune 500 company level. Is this a bad thing? Certainly not. However, they will lure you into using services that seem simple on the surface but have many hidden complexities.
+
+One example I like to use is Pub/Sub in Google Cloud Platform. Instead of doing a network call to your service for sending an email, you could use a queue with Pub/Sub. You implement it very fast and you have a very nice decoupled service. When releasing the service, you realize that it is sometimes sending emails multiple times, why is that? Pub/Sub is promising that your message will be delivered at least once. But it also means it could be delivered multiple times and you did not know you had to protect against that. After some time, your email provider is blocking you because you are spamming. You forgot to set the proper retry policy and the default setting will retry very quickly and never stop. One email with a bug and your service is gone.
+
+By using a product that you or other team members don’t have enough experience with, you have to be careful not to risk your company or client livelihood because of it.
+
+## Keep It Simple, But Not Too Much
+
+If you really want to keep it simple, but not too much, you start with something that is too simple for your taste but will be easy to keep evolving. You get your MVP done first. Then, you can have multiple iterations until it becomes a very mature software. When defining your vision, your iterations and your perfect architecture, you should think long term. However, when coding you should only think short term. Delivering something in the hand of your customers faster and iterating over it will always give a better result than trying to build the perfect thing nobody wants. 
+
+Now go build something great that customers want!
+
