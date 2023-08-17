@@ -2,5 +2,17 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base"
+  ],
+  "rangeStrategy": "bump",
+  "timezone": "America/Montreal",
+  "packageRules": [
+    {
+      "packagePatterns": [".*"],
+      "schedule": ["before 6am on Friday"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "automerge": true
+    }
   ]
 }
