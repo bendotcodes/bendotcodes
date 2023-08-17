@@ -1,6 +1,6 @@
 import { writeFileSync, mkdirSync } from 'fs'
 import path from 'path'
-import GithubSlugger from 'github-slugger'
+import * as GithubSlugger from 'github-slugger'
 import { escape } from 'pliny/utils/htmlEscaper.js'
 import siteMetadata from '../data/siteMetadata.js'
 import tagData from '../app/tag-data.json' assert { type: 'json' }
