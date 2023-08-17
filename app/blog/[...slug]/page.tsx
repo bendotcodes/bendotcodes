@@ -21,6 +21,8 @@ const layouts = {
   PostBanner,
 }
 
+export const runtime = 'nodejs'
+
 export async function generateMetadata({
   params,
 }: {
