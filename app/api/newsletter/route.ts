@@ -1,7 +1,7 @@
 import { NewsletterAPI } from 'pliny/newsletter'
 import siteMetadata from '@/data/siteMetadata'
 
-export const runtime = 'node'
+export const runtime = 'nodejs'
 
 const handler = NewsletterAPI({
   // @ts-ignore
