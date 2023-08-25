@@ -10,8 +10,8 @@
     "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "13.4.18",
-    "@tailwindcss/forms": "^0.5.4",
+    "@next/bundle-analyzer": "13.4.19",
+    "@tailwindcss/forms": "^0.5.5",
     "@tailwindcss/typography": "^0.5.9",
     "@vercel/analytics": "^1.0.2",
     "autoprefixer": "^10.4.15",
@@ -19,7 +19,7 @@
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "image-size": "1.0.2",
-    "next": "13.4.18",
+    "next": "13.4.19",
     "next-contentlayer": "0.3.4",
     "next-themes": "^0.2.1",
     "pliny": "0.1.1",
@@ -41,20 +41,20 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
-    "@types/mdx": "^2.0.6",
-    "@types/react": "^18.2.20",
-    "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "@typescript-eslint/parser": "^6.4.0",
+    "@types/mdx": "^2.0.7",
+    "@types/react": "^18.2.21",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.47.0",
-    "eslint-config-next": "13.4.18",
+    "eslint-config-next": "13.4.19",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.0",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.2",
     "prettier-plugin-tailwindcss": "^0.5.3",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
   "resolutions": {
     "@opentelemetry/api": "1.4.1",
