@@ -42,9 +42,9 @@
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
     "@types/mdx": "^2.0.10",
-    "@types/react": "^18.2.42",
-    "@typescript-eslint/eslint-plugin": "^6.13.2",
-    "@typescript-eslint/parser": "^6.13.2",
+    "@types/react": "^18.2.45",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.55.0",
     "eslint-config-next": "13.5.6",
@@ -52,18 +52,18 @@
     "eslint-plugin-prettier": "^5.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
-    "prettier": "^3.1.0",
+    "prettier": "^3.1.1",
     "prettier-plugin-tailwindcss": "^0.5.9",
     "typescript": "^5.3.3"
   },
   "resolutions": {
     "@opentelemetry/api": "1.7.0",
-    "@opentelemetry/core": "1.18.1",
-    "@opentelemetry/exporter-trace-otlp-grpc": "0.45.1",
-    "@opentelemetry/resources": "1.18.1",
-    "@opentelemetry/sdk-trace-base": "1.18.1",
-    "@opentelemetry/sdk-trace-node": "1.18.1",
-    "@opentelemetry/semantic-conventions": "1.18.1",
+    "@opentelemetry/core": "1.19.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "0.46.0",
+    "@opentelemetry/resources": "1.19.0",
+    "@opentelemetry/sdk-trace-base": "1.19.0",
+    "@opentelemetry/sdk-trace-node": "1.19.0",
+    "@opentelemetry/semantic-conventions": "1.19.0",
     "unified": "^10.1.2"
   },
   "lint-staged": {
